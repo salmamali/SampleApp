@@ -9,8 +9,10 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity
 } from 'react-native';
+import Instacapture from './InstacaptureModule';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -33,6 +35,9 @@ export default class App extends Component<Props> {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
+        <TouchableOpacity onPress={() => Instacapture.capture()}>
+          <Text>Capture</Text>
+        </TouchableOpacity>
       </View>
     );
   }
