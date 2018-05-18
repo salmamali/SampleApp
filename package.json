@@ -9,6 +9,7 @@
   "dependencies": {
     "react": "16.3.1",
     "react-native": "0.55.4",
+    "react-native-ibgx-network-manager": "file:IbgxNetworkManager",
     "react-native-instacapture": "file:Instacapture"
   },
   "devDependencies": {
