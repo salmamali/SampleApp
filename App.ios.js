@@ -12,6 +12,7 @@ import {
   View,
   TouchableOpacity
 } from 'react-native';
+import NetworkManager from 'react-native-ibgx-network-manager';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -34,10 +35,20 @@ export default class App extends Component<Props> {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
-
+        <TouchableOpacity onPress={() => this.getRequest()}>
+        <Text>Get</Text>
+        </TouchableOpacity>
       </View>
     );
   }
+
+  getRequest() {
+    NetworkManager.get('https://www.propertyfinder.ae/mobileapi?page=[0]&order=[pd]', (error, res) => {
+      alert(res);
+      alert(error);
+    });
+  }
+
 }
 
 const styles = StyleSheet.create({

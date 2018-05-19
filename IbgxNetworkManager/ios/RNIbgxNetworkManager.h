@@ -5,8 +5,9 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
+#import <IBGxNetworkManager/IBGxNetworkManager.h>
 
-@interface RNIbgxNetworkManager : NSObject <RCTBridgeModule>
+@interface RNIbgxNetworkManager : IBGxNetworkManager <RCTBridgeModule>
  
 @end
   
